@@ -4,7 +4,7 @@
   "private": true,
   "scripts": {
     "dev": "next dev",
-    "build": "next build",
+    "build": "SENTRY_ORG=js-mastery-ec next build",
     "start": "next start",
     "lint": "next lint"
   },
