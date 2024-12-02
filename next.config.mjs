@@ -1,13 +1,15 @@
-import { withSentryConfig } from ("@sentry/nextjs");
+// next.config.mjs
+import { withSentryConfig } from "@sentry/nextjs";
 
 const config = {
   // your existing next config
+  reactStrictMode: true,
+  swcMinify: true,
 };
 
 const sentryWebpackPluginOptions = {
   org: "js-mastery-ec",
-  project: "javascript-nextjs", // Add this line
-  // other sentry options...
+  project: "javascript-nextjs",
   silent: true,
 };
 
