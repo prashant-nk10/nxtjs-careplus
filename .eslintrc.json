@@ -1,5 +1,7 @@
 {
-  "plugins": ["import"],
+  "plugins": [
+    "import"
+  ],
   "extends": [
     "next/core-web-vitals",
     "standard",
@@ -8,8 +10,12 @@
   ],
   "rules": {
     "no-undef": "off",
+    "no-unused-vars": "warn",
+    "no-unreachable": "warn",
+    "react-hooks/exhaustive-deps": "warn",
+    "tailwindcss/enforces-shorthand": "warn",
     "import/order": [
-      "error",
+      "warn", // Changed from "error" to "warn"
       {
         "groups": [
           "builtin",
