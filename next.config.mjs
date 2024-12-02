@@ -1,4 +1,4 @@
-const { withSentryConfig } = require("@sentry/nextjs");
+import { withSentryConfig } from ("@sentry/nextjs");
 
 const config = {
   // your existing next config
@@ -8,6 +8,7 @@ const sentryWebpackPluginOptions = {
   org: "js-mastery-ec",
   project: "javascript-nextjs", // Add this line
   // other sentry options...
+  silent: true,
 };
 
-module.exports = withSentryConfig(config, sentryWebpackPluginOptions);
+export default withSentryConfig(config, sentryWebpackPluginOptions);
